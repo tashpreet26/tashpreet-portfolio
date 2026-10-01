@@ -259,86 +259,15 @@
 
 /* ---------------------------- Loading screen ---------------------------- */
 
-@keyframes seal-enter {
-  0% {
-    opacity: 0;
-    transform: scale(1.6) rotate(-14deg);
-    filter: blur(6px);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(0.94) rotate(2deg);
-    filter: blur(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-    filter: blur(0);
-  }
-}
-
-@keyframes seal-sway {
+@keyframes light-pulse {
   0%,
   100% {
-    transform: rotate(-2.5deg);
+    opacity: 0.5;
+    transform: scale(1);
   }
   50% {
-    transform: rotate(2.5deg);
-  }
-}
-
-@keyframes seal-half-left {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-46px, 26px) rotate(-14deg);
-    opacity: 0;
-  }
-}
-
-@keyframes seal-half-right {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(46px, 26px) rotate(14deg);
-    opacity: 0;
-  }
-}
-
-@keyframes crack-flash {
-  0%,
-  55% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.2;
-  }
-  85% {
     opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes glow-burst {
-  0% {
-    opacity: 0;
-    transform: scale(0.4);
-  }
-  35% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(2.4);
+    transform: scale(1.12);
   }
 }
 
@@ -423,29 +352,8 @@
   }
 }
 
-.animate-seal-enter {
-  animation: seal-enter 0.7s var(--ease-out-expo) both;
-}
-
-.animate-seal-sway {
-  animation: seal-sway 3.2s ease-in-out infinite;
-  transform-origin: 50% 0%;
-}
-
-.animate-seal-half-left {
-  animation: seal-half-left 0.55s var(--ease-out-expo) forwards;
-}
-
-.animate-seal-half-right {
-  animation: seal-half-right 0.55s var(--ease-out-expo) forwards;
-}
-
-.animate-crack-flash {
-  animation: crack-flash 0.5s linear forwards;
-}
-
-.animate-glow-burst {
-  animation: glow-burst 0.9s var(--ease-out-expo) forwards;
+.animate-light-pulse {
+  animation: light-pulse 2.6s ease-in-out infinite;
 }
 
 .animate-stamp-in {
