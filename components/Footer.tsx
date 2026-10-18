@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { contactLinks } from "@/lib/content";
+import { scrollToTop } from "@/lib/smooth";
 import { bhopalTime } from "@/lib/time";
 
 const SOCIALS = contactLinks.filter((l) => l.href.startsWith("http"));
@@ -21,8 +22,7 @@ export default function Footer() {
   }, []);
 
   const toTop = () => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    scrollToTop();
   };
 
   return (

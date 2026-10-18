@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { projects } from "@/lib/content";
 import { OPEN_CASE } from "@/lib/events";
+import { lockScroll, unlockScroll } from "@/lib/smooth";
 import ProjectArt from "./ProjectArt";
 
 export default function CaseStudy() {
@@ -11,14 +12,18 @@ export default function CaseStudy() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const restoreTo = useRef<HTMLElement | null>(null);
+  const closingRef = useRef(false);
 
   const project = projects.find((p) => p.slug === slug) ?? null;
 
   const close = () => {
+    if (closingRef.current) return;
+    closingRef.current = true;
+    unlockScroll();
     setEntered(false);
     window.setTimeout(() => {
       setSlug(null);
-      document.body.style.overflow = "";
+      closingRef.current = false;
       restoreTo.current?.focus?.();
     }, 700);
   };
@@ -31,7 +36,7 @@ export default function CaseStudy() {
       restoreTo.current = from;
       setSlug(next);
       setEntered(false);
-      document.body.style.overflow = "hidden";
+      lockScroll();
       window.setTimeout(() => setEntered(true), 40);
       window.setTimeout(() => closeRef.current?.focus(), 400);
     };
@@ -64,6 +69,7 @@ export default function CaseStudy() {
       aria-modal="true"
       aria-label={`${project.title} — case study`}
       ref={scrollRef}
+      data-lenis-prevent
       className="fixed inset-0 z-[160] overflow-y-auto overscroll-contain bg-ink text-bone"
       style={{
         clipPath: entered ? "inset(0 0 0 0)" : "inset(100% 0 0 0)",

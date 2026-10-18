@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import Preloader from "@/components/Preloader";
 import RevealProvider from "@/components/RevealProvider";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <Preloader />
+        <SmoothScroll />
         <Nav />
         <Cursor />
         <RevealProvider />

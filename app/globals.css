@@ -472,6 +472,12 @@ html.has-cursor * {
   display: none;
 }
 
+/* Locomotive Scroll (Lenis) owns the scroll while it smooths — a native
+   `scroll-behavior: smooth` would fight every frame it writes. */
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

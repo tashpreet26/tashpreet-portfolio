@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { lockScroll, unlockScroll } from "@/lib/smooth";
 
 /** Short editorial intro: counter, curtain, then it never comes back. */
 export default function Preloader() {
@@ -14,7 +15,8 @@ export default function Preloader() {
       return () => cancelAnimationFrame(skip);
     }
 
-    document.body.style.overflow = "hidden";
+    // hold the document still — smooth scroll included — while the curtain is up
+    lockScroll();
     const start = performance.now();
     const duration = 850;
     let raf = 0;
@@ -33,7 +35,7 @@ export default function Preloader() {
         t1 = window.setTimeout(() => setPhase("out"), 120);
         t2 = window.setTimeout(() => {
           setPhase("done");
-          document.body.style.overflow = "";
+          unlockScroll();
         }, 900);
       }
     };
@@ -43,7 +45,7 @@ export default function Preloader() {
       cancelAnimationFrame(raf);
       clearTimeout(t1);
       clearTimeout(t2);
-      document.body.style.overflow = "";
+      unlockScroll();
     };
   }, []);
 
