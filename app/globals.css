@@ -90,7 +90,9 @@
 }
 .outline-type {
   -webkit-text-stroke: 1.5px currentColor;
-  color: transparent;
+  /* keep `color` intact so currentColor resolves to the real ink/bone,
+     only the glyph fill is knocked out */
+  -webkit-text-fill-color: transparent;
 }
 @media (min-width: 768px) {
   .outline-type {
