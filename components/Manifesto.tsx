@@ -1,8 +1,6 @@
-import ProjectArt from "./ProjectArt";
-
 const DETAILS = [
   { label: "Based", value: "Bhopal, Madhya Pradesh" },
-  { label: "Working across", value: "Identity, editorial, motion, web" },
+  { label: "Working across", value: "Service design, product systems, design thinking" },
   { label: "Listening", value: "Hindustani classical → broken electronic" },
   { label: "Reading", value: "Second-hand paperbacks, half-finished" },
   { label: "Fuel", value: "Adrak chai, three cups minimum" },
@@ -46,10 +44,10 @@ export default function Manifesto() {
           style={{ "--d": "0.4s" } as React.CSSProperties}
           aria-label="difficult"
         >
-          <span className="swap-main inline-block" style={{ color: "var(--accent)" }}>
+          <span className="swap-main inline-block" style={{ color: "var(--accent-soft)" }}>
             difficult
           </span>
-          <span className="swap-alt inline-block italic" style={{ color: "var(--accent)" }}>
+          <span className="swap-alt inline-block italic" style={{ color: "var(--accent-soft)" }}>
             impossible
           </span>
         </span>
@@ -57,32 +55,20 @@ export default function Manifesto() {
       </p>
 
       <div className="mt-[10vh] grid gap-10 md:grid-cols-12 md:gap-8">
-        <figure className="md:col-span-5 lg:col-span-4">
-          <div
-            data-reveal="scale"
-            className="relative aspect-[3/4] w-full overflow-hidden"
-            style={{ boxShadow: "0 50px 90px -60px rgba(0,0,0,0.9)" }}
-          >
-            <ProjectArt variant="bust" bg="#b5412b" fg="#100e0c" accent="#e9e3d6" seed={9} />
-          </div>
-          <figcaption className="mt-3 flex items-start justify-between micro opacity-60">
-            <span>Plate 02 — photographed by a friend</span>
-            <span>2025</span>
-          </figcaption>
-        </figure>
-
-        <div className="md:col-span-7 lg:col-span-7 lg:col-start-6">
+        <div className="md:col-span-7 lg:col-span-7 lg:col-start-1">
           <div data-reveal className="max-w-[54ch] space-y-6 text-[clamp(1.05rem,1.35vw,1.3rem)] leading-relaxed text-bone/85">
             <p>
-              I&apos;m Tashpreet — a designer working across identity, editorial and
-              motion, from Bhopal. I care about the space between rigour and instinct:
-              systems that hold, type that speaks, images that refuse to behave.
+              I&apos;m Tashpreet — a designer working across service design, product
+              systems and visual craft, from Bhopal. I care about the space between
+              rigour and instinct: systems that hold, type that speaks, and journeys
+              that stop failing at the fourth step.
             </p>
             <p>
-              The last few years have been spent building visual identities and digital
-              experiences for culture-led brands, studios and people with unreasonable
-              ideas. I like briefs that arrive as a question rather than an answer, and I
-              will happily argue about a single millimetre of kerning.
+              The last few years have been spent blueprinting how services and
+              software actually behave for the people inside them — ERP platforms,
+              internal tools, operations teams with too many tabs open. I like briefs
+              that arrive as a question rather than an answer, and I will happily
+              argue about a single millimetre of kerning.
             </p>
           </div>
 
@@ -101,7 +87,7 @@ export default function Manifesto() {
           </dl>
 
           <p className="mt-8 micro opacity-45">
-            psst — the T/K up top switches the palette. there are five.
+            psst — the T/K up top switches the palette. there are two.
           </p>
         </div>
       </div>

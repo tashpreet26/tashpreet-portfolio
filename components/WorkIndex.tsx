@@ -75,7 +75,10 @@ export default function WorkIndex() {
       </ul>
 
       <div className="mt-[8vh] flex flex-wrap items-center justify-between gap-4 border-t border-ink/20 py-6 micro">
-        <span>Index — 06 / 06</span>
+        <span>
+          Index — {String(projects.length).padStart(2, "0")} /{" "}
+          {String(projects.length).padStart(2, "0")}
+        </span>
         <span className="opacity-55">
           Different art direction for every project, on purpose
         </span>

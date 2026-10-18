@@ -8,7 +8,7 @@ export default function Bhopal() {
       className="relative overflow-hidden bg-olive px-5 pt-[13vh] pb-[12vh] text-bone md:px-8"
     >
       <div className="pointer-events-none absolute inset-0 opacity-25" aria-hidden>
-        <ProjectArt variant="contour" bg="#4d5730" fg="#e9e3d6" accent="#c9f23a" seed={12} />
+        <ProjectArt variant="contour" bg="#4d5730" fg="#e9e3d6" accent="#100e0c" seed={12} />
       </div>
 
       <div className="relative">
@@ -27,7 +27,7 @@ export default function Bhopal() {
                 between chaos
               </span>
             </span>
-            <span className="block font-serif text-[clamp(2.4rem,8vw,7.4rem)] italic leading-[1] text-acid">
+            <span className="block font-serif text-[clamp(2.4rem,8vw,7.4rem)] italic leading-[1] text-bone">
               <span data-reveal style={{ "--d": "0.16s" } as React.CSSProperties}>
                 &amp; calm.
               </span>
@@ -53,7 +53,7 @@ export default function Bhopal() {
             <span className="rule h-px flex-1" />
             <span>Colour, collected locally</span>
           </div>
-          <ul className="mt-5 grid gap-px border border-bone/25 bg-bone/25 sm:grid-cols-2 lg:grid-cols-5">
+          <ul className="mt-5 grid gap-px border border-bone/25 bg-bone/25 sm:grid-cols-2 lg:grid-cols-4">
             {paletteSwatches.map((s, i) => (
               <li
                 key={s.name}

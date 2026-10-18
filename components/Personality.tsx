@@ -88,7 +88,7 @@ export default function Personality() {
               {item.detail}.
             </p>
             <div className="mt-6 flex items-center gap-2 micro opacity-55">
-              <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ background: "var(--accent)" }} />
+              <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ background: "var(--accent-soft)" }} />
               hover the list — the file updates
             </div>
           </div>

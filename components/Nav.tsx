@@ -5,8 +5,12 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { bhopalTime } from "@/lib/time";
 
-const ACCENTS = ["#c9f23a", "#1f31d8", "#b5412b", "#4d5730", "#b4afa5"];
-const FLASH = ["palette — 01", "palette — 02", "palette — 03", "palette — 04", "ok. that's the lot."];
+const ACCENTS = ["#4c1220", "#4d5730"];
+const FLASH = [
+  "palette — 01",
+  "palette — 02",
+  "two colours. that's the whole wardrobe.",
+];
 
 const LINKS = [
   { label: "Work", href: "/work" },
@@ -136,7 +140,9 @@ export default function Nav() {
             data-cursor="SWITCH"
             aria-label="Tashpreet Kaur — switch palette"
             className="inline-block h-1.5 w-1.5 rounded-full transition-transform hover:scale-150"
-            style={{ background: "var(--accent)" }}
+            style={{
+              background: theme === "dark" ? "var(--accent-soft)" : "var(--accent)",
+            }}
           />
           <span>Bhopal, IN</span>
           <span className="opacity-40">—</span>

@@ -5,8 +5,11 @@ import { projects, type Project } from "@/lib/content";
 import { openCase } from "@/lib/events";
 import ProjectArt from "./ProjectArt";
 
-const railProjects = projects.slice(0, 4);
-const featureProjects = projects.slice(4);
+/** two in the pinned rail, the rest as asymmetric features below */
+const railProjects = projects.slice(0, Math.min(2, projects.length));
+const featureProjects = projects.slice(railProjects.length);
+const total = projects.length;
+const pad = (n: number) => String(n).padStart(2, "0");
 
 function Art({ project, seed, className = "" }: { project: Project; seed?: number; className?: string }) {
   return (
@@ -222,7 +225,7 @@ export default function Work() {
                 Work
               </span>
               <span className="font-serif text-[clamp(1.1rem,2.2vw,2rem)] italic normal-case opacity-60">
-                (06)
+                ({pad(total)})
               </span>
             </span>
           </h2>
@@ -257,21 +260,27 @@ export default function Work() {
       </div>
 
       {/* asymmetric features */}
-      <div className="mt-[14vh] space-y-[12vh] px-5 md:px-8">
-        <div className="flex items-center gap-5 micro opacity-50">
-          <span className="rule h-px flex-1" />
-          <span>Continue — 05 / 06</span>
-        </div>
-        {featureProjects.map((project, i) => (
-          <div key={project.slug} data-reveal>
-            <Feature project={project} flip={i % 2 === 1} />
+      {featureProjects.length > 0 && (
+        <div className="mt-[14vh] space-y-[12vh] px-5 md:px-8">
+          <div className="flex items-center gap-5 micro opacity-50">
+            <span className="rule h-px flex-1" />
+            <span>
+              Continue — {pad(railProjects.length + 1)} / {pad(total)}
+            </span>
           </div>
-        ))}
-      </div>
+          {featureProjects.map((project, i) => (
+            <div key={project.slug} data-reveal>
+              <Feature project={project} flip={i % 2 === 1} />
+            </div>
+          ))}
+        </div>
+      )}
 
       <div className="mt-[12vh] flex flex-wrap items-center justify-between gap-4 border-t border-ink/20 px-5 py-6 micro md:px-8">
         <span>Drag your eyes across — or just click</span>
-        <span className="opacity-55">Six projects, six different art directions</span>
+        <span className="opacity-55">
+          {total} projects, {total} different art directions
+        </span>
       </div>
     </section>
   );

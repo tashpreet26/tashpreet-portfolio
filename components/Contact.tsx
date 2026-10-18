@@ -40,7 +40,7 @@ export default function Contact() {
             something
           </span>
         </span>
-        <span className="block font-serif text-[clamp(2.2rem,9.5vw,9rem)] italic leading-[1.02]" style={{ color: "var(--accent)" }}>
+        <span className="block font-serif text-[clamp(2.2rem,9.5vw,9rem)] italic leading-[1.02]" style={{ color: "var(--accent-soft)" }}>
           <span key={closer} className="rise-fade inline-block">
             {CLOSERS[closer]}
           </span>
@@ -54,7 +54,7 @@ export default function Contact() {
             <a
               href="mailto:hello@tashpreetkaur.studio"
               data-cursor="OPEN"
-              className="mt-3 block font-display text-[clamp(1.6rem,4.6vw,4rem)] uppercase leading-none underline decoration-[0.06em] underline-offset-[0.18em] transition-colors hover:text-acid"
+              className="mt-3 block font-display text-[clamp(1.6rem,4.6vw,4rem)] uppercase leading-none underline decoration-[0.06em] underline-offset-[0.18em] transition-colors hover:text-sage"
             >
               hello@<br className="md:hidden" />tashpreetkaur.studio
             </a>

@@ -60,7 +60,7 @@ export default function Ticker({ items }: { items: string[] }) {
             <span className="px-[0.3em] uppercase">{item}</span>
             <span
               className="mx-[0.25em] inline-block h-[0.15em] w-[0.15em] rotate-45"
-              style={{ background: "var(--accent)" }}
+              style={{ background: "var(--accent-soft)" }}
               aria-hidden
             />
           </span>

@@ -72,7 +72,8 @@ export default function CaseStudy() {
     >
       <div className="sticky top-0 z-20 flex items-center justify-between gap-4 border-b border-bone/15 bg-ink/90 px-5 py-4 backdrop-blur md:px-8">
         <span className="micro truncate">
-          {String(project.index).padStart(2, "0")} / 06 — {project.discipline}
+          {String(project.index).padStart(2, "0")} / {String(projects.length).padStart(2, "0")} —{" "}
+          {project.discipline}
         </span>
         <button
           ref={closeRef}
@@ -219,7 +220,7 @@ export default function CaseStudy() {
               {next.title}
             </span>
           </span>
-          <span className="font-display text-[clamp(2rem,6vw,5rem)] leading-none" style={{ color: "var(--accent)" }}>
+          <span className="font-display text-[clamp(2rem,6vw,5rem)] leading-none" style={{ color: "var(--accent-soft)" }}>
             ↗
           </span>
         </button>

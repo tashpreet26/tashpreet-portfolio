@@ -79,7 +79,7 @@ export default function Preloader() {
         <span className="block h-px w-full bg-bone/15">
           <span
             ref={barRef}
-            className="block h-px w-full origin-left scale-x-0 bg-acid"
+            className="block h-px w-full origin-left scale-x-0 bg-sage"
             style={{ transition: "background-color .3s" }}
           />
         </span>

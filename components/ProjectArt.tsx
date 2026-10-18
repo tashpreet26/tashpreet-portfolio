@@ -313,30 +313,6 @@ export default function ProjectArt({
     );
   }
 
-  if (variant === "bust") {
-    body = (
-      <>
-        <rect x={548} y={0} width={132} height={1200} fill={accent} opacity={0.16} />
-        <circle cx={450} cy={430} r={286} fill="none" stroke={accent} strokeWidth={3} opacity={0.75} />
-        <circle cx={450} cy={430} r={304} fill="none" stroke={accent} strokeWidth={1} opacity={0.4} />
-        <g fill={fg}>
-          <circle cx={450} cy={214} r={74} />
-          <ellipse cx={450} cy={418} rx={152} ry={184} />
-          <rect x={396} y={520} width={108} height={190} />
-          <path d="M112 1200 C 146 916, 274 706, 450 706 C 626 706, 754 916, 788 1200 Z" />
-        </g>
-        <path
-          d="M112 1200 C 146 916, 274 706, 450 706"
-          fill="none"
-          stroke={accent}
-          strokeWidth={4}
-          opacity={0.8}
-        />
-        <line x1={40} x2={860} y1={1120} y2={1120} stroke={accent} strokeWidth={2} opacity={0.7} />
-      </>
-    );
-  }
-
   return (
     <svg
       viewBox="0 0 900 1200"

@@ -5,7 +5,7 @@ export default function Statement() {
   return (
     <section
       data-nav-theme="dark"
-      className="bg-ink px-5 pt-[13vh] pb-[12vh] text-bone md:px-8"
+      className="bg-olive px-5 pt-[13vh] pb-[12vh] text-bone md:px-8"
     >
       <div className="flex items-start justify-between micro">
         <span>01 — In short</span>
@@ -22,14 +22,12 @@ export default function Statement() {
             data-reveal
             style={{ "--d": "0.07s" } as React.CSSProperties}
           >
-            making identities, editorial systems and motion
+            making services, product systems and design thinking
           </span>
           <span
             className="block italic"
             data-reveal
-            style={
-              { "--d": "0.14s", color: "var(--accent)" } as React.CSSProperties
-            }
+            style={{ "--d": "0.14s" } as React.CSSProperties}
           >
             that refuse to blend in.
           </span>
@@ -45,7 +43,7 @@ export default function Statement() {
           <div>
             <span className="micro block opacity-50">Working across</span>
             <p className="mt-1 font-serif text-[1.15rem] italic">
-              Identity · editorial · motion · web
+              Service design · ERP · design thinking
             </p>
           </div>
           <Link

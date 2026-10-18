@@ -8,9 +8,9 @@ import Work from "@/components/Work";
 const TICKER = [
   "Bhopal / India",
   "Made somewhere between chaos & calm",
-  "Identity",
-  "Editorial",
-  "Motion",
+  "Service design",
+  "ERP systems",
+  "Design thinking",
   "Art direction",
   "Available for 2026",
 ];

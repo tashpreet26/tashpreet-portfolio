@@ -2,7 +2,9 @@
 
 /* ------------------------------------------------------------------
    Tashpreet Kaur — visual system
-   bone / ink / burgundy / oxide / cobalt / olive / silver / acid
+   base: warm ivory (bone) + deep charcoal (ink)
+   brand: burgundy #4c1220 + olive #4d5730 (+ one lifted olive for
+   text accents on dark surfaces — same hue family, nothing else)
 ------------------------------------------------------------------ */
 @theme {
   --color-bone: #e9e3d6;
@@ -10,11 +12,8 @@
   --color-ink: #100e0c;
   --color-ink-soft: #1a1714;
   --color-burgundy: #4c1220;
-  --color-oxide: #b5412b;
-  --color-cobalt: #1f31d8;
   --color-olive: #4d5730;
-  --color-silver: #b4afa5;
-  --color-acid: #c9f23a;
+  --color-sage: #9aa878;
 
   --font-sans: var(--f-grotesk);
   --font-serif: var(--f-serif);
@@ -27,7 +26,8 @@
 
 @layer base {
   :root {
-    --accent: #c9f23a;
+    --accent: #4c1220;
+    --accent-soft: #9aa878;
     --grain: 0.06;
     color-scheme: light;
   }
@@ -54,11 +54,11 @@
 
   ::selection {
     background: var(--accent);
-    color: var(--color-ink);
+    color: var(--color-bone);
   }
 
   :focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid currentColor;
     outline-offset: 4px;
   }
 
@@ -74,10 +74,10 @@
     background: var(--color-ink);
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--color-oxide);
+    background: var(--color-burgundy);
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
+    background: var(--color-olive);
   }
 }
 

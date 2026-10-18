@@ -32,7 +32,7 @@ export default function CtaBand() {
         <a
           href="mailto:hello@tashpreetkaur.studio"
           data-cursor="OPEN"
-          className="font-serif text-[clamp(1.3rem,3vw,2.6rem)] italic underline decoration-[0.05em] underline-offset-[0.2em] transition-colors hover:text-acid"
+          className="font-serif text-[clamp(1.3rem,3vw,2.6rem)] italic underline decoration-[0.05em] underline-offset-[0.2em] transition-colors hover:text-ink"
         >
           hello@tashpreetkaur.studio
         </a>

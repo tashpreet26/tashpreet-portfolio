@@ -14,20 +14,20 @@ export const metadata: Metadata = {
     template: "%s — Tashpreet Kaur",
   },
   description:
-    "Portfolio of Tashpreet Kaur, a designer and art director based in Bhopal, India. Identity, editorial, motion and digital work made somewhere between chaos and calm.",
+    "Portfolio of Tashpreet Kaur, a service designer and art director based in Bhopal, India. Service design, ERP product systems and design-thinking work, made somewhere between chaos and calm.",
   authors: [{ name: "Tashpreet Kaur" }],
   keywords: [
     "Tashpreet Kaur",
-    "designer Bhopal",
-    "art direction India",
-    "brand identity",
-    "editorial design",
-    "motion design",
+    "service designer Bhopal",
+    "service design India",
+    "design thinking",
+    "ERP UX",
+    "product design",
   ],
   openGraph: {
     title: "Tashpreet Kaur — Designer & Art Director, Bhopal",
     description:
-      "Identity, editorial, motion and digital work made somewhere between chaos and calm.",
+      "Service design, ERP product systems and design thinking, made somewhere between chaos and calm.",
     locale: "en_IN",
     type: "website",
   },
