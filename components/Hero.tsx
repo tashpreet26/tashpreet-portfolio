@@ -57,7 +57,7 @@ export default function Hero() {
         <h1 data-cursor="HELLO" className="relative z-10 mix-blend-normal">
           <span className="mask-line">
             <span
-              className="rise block font-display text-[clamp(4rem,30vw,30rem)] leading-[0.85] tighter"
+              className="rise block pr-[0.06em] font-display text-[length:calc((100vw_-_2.5rem)/4.45)] leading-[0.85] tighter md:text-[length:calc((100vw_-_4rem)/4.45)]"
               style={{ "--d": "1.15s" } as React.CSSProperties}
             >
               TASHPREET
@@ -68,7 +68,7 @@ export default function Hero() {
               className="rise flex flex-wrap items-baseline gap-x-6 gap-y-2 md:gap-x-10"
               style={{ "--d": "1.3s" } as React.CSSProperties}
             >
-              <span className="outline-type font-display text-[clamp(2.4rem,13vw,13rem)] leading-[0.85] tighter">
+              <span className="outline-type font-display text-[length:calc((100vw_-_2.5rem)/2.4)] leading-[0.85] tighter md:text-[clamp(2.4rem,13vw,13rem)]">
                 KAUR
               </span>
               <span className="hidden font-serif text-[clamp(1rem,2.2vw,2rem)] italic leading-[1.1] text-burgundy md:block">

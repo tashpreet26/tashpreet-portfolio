@@ -163,7 +163,7 @@ export const paletteSwatches = [
 
 export const contactLinks = [
   { label: "Email", value: "hello@tashpreetkaur.studio", href: "mailto:hello@tashpreetkaur.studio" },
-  { label: "Instagram", value: "@tashpreet.kaur", href: "https://instagram.com" },
+  // { label: "Instagram", value: "@tashpreet.kaur", href: "https://instagram.com" },
   { label: "LinkedIn", value: "in/tashpreetkaur", href: "https://linkedin.com" },
   { label: "Behance", value: "behance.net/tashpreetkaur", href: "https://behance.net" },
 ];
